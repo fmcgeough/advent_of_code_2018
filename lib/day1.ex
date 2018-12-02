@@ -19,7 +19,7 @@ defmodule Day1 do
   """
   def resulting_frequency(data) do
     data
-    |> Enum.reduce(0, fn x, acc -> acc + x end)
+    |> Enum.sum()
   end
 
   @doc """
