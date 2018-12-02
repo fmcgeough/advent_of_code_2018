@@ -4,7 +4,7 @@ defmodule Puzzle1 do
   """
 
   @doc """
-  Hello world.
+  Find the final frequency based on List of integer values
 
   ## Examples
 
@@ -20,19 +20,5 @@ defmodule Puzzle1 do
   def resulting_frequency(data) do
     data
     |> Enum.reduce(0, fn x, acc -> acc + x end)
-  end
-
-  def convert_to_integers(file) do
-    file
-    |> File.read()
-    |> case do
-      {:ok, data} ->
-        String.split(data, "\n")
-        |> Enum.filter(fn str -> str != "" end)
-        |> Enum.map(fn str -> String.to_integer(str) end)
-
-      _ ->
-        []
-    end
   end
 end
